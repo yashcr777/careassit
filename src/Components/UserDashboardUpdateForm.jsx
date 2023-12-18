@@ -91,8 +91,8 @@ function UserDashboardUpdateForm() {
   }
   return (
     <div className="flex flex-col bg-no-repeat bg-cover w-full justify-center items-center">
-      <h2>Hi User,</h2>
-      <h3>Update Your Details</h3>
+      <h2 className="text-2xl text-indigo-500">Hi User,</h2>
+      <h3 className="text-xl text-indigo-500">Update Your Details</h3>
       <form
         className="max-w-[400px] w-full max-auto bg-green-200 p-8 px-8 rounded-lg "
         onSubmit={handleSubmit}

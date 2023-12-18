@@ -4,6 +4,7 @@ import { getCookie } from "../utils";
 import { Link } from "react-router-dom";
 var user = JSON.parse(localStorage.getItem("id"));
 const Navbar = () => {
+  var user = JSON.parse(localStorage.getItem("id"));
   // let Links = [
   //   { name: links[0].name, link: links[0].link },
   //   { name: links[1].name, link: links[1].link },
@@ -75,9 +76,12 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <Link to="/">
+          {user?(<Link to="/login">
             <Button>Get Started</Button>
-          </Link>
+          </Link>):(<Link to="/insuranceplans">
+            <Button>Get Started</Button>
+          </Link>)}
+          
         </ul>
       </div>
     </div>

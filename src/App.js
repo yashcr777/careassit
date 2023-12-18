@@ -34,6 +34,7 @@ import InvoicePayment from "./Components/InvoicePayment";
 import AllCLaims from "./Components/AllCLaims";
 import AllInvoices from "./Components/AllInvoices";
 import AllRequests from "./Components/AllRequests";
+import Singleplan from "./Components/Singleplan";
 function App() {
   
   var user = JSON.parse(localStorage.getItem("id"));
@@ -41,7 +42,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route exact path="/" element={user ? <Home /> : <LoginForm />} />
+          <Route exact path="/" element={user ? <UserDashBoard /> : <Home />} />
           <Route
             exact
             path="/login"
@@ -88,6 +89,7 @@ function App() {
           <Route path="/allclaim" element={<AllCLaims />} />
           <Route path="/allinvoice" element={<AllInvoices/>}/>
           <Route path="/allrequest" element={<AllRequests/>}/>
+          <Route path="/singleplan" element={<Singleplan/>}/>
         </Routes>
       </Router>
     </>

@@ -63,7 +63,7 @@ function Invoices({ x }) {
         ) : (
           ""
         )}
-        {getCookie("Role") === "User" && userid ? (
+        {getCookie("Role") === "User" && userid && x.status==1 ? (
           <button
             className="w-36 my-5 py-2 bg-teal-500"
             onClick={handleClickPayment}

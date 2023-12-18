@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Providers from "./Providers";
+import Navbar from "./Navbar"
 function AllProviders() {
   const [providerData, setProviderData] = useState([]);
   useEffect(() => {
@@ -17,6 +18,7 @@ function AllProviders() {
   }, []);
   return (
     <div>
+      <Navbar/>
       <div className="flex flex-row">
         {providerData.map((x, index) => (
           <Providers key={x} x={x}></Providers>

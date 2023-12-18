@@ -44,7 +44,7 @@ function LoginForm() {
   }
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
     <div className="flex flex-col bg-no-repeat bg-cover w-full h-screen justify-center items-center ">
       <div>
         <pre>
@@ -76,7 +76,7 @@ function LoginForm() {
         <div className="flex flex-col text-black-600 py-2">
           <label className="font-bold">Password</label>
           <input
-            className="rounded-lg bg-yellow-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-100 focus:outline-none border-solid border-2 border-black"
+            className="rounded-lg bg-yellow-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-100  border-solid border-2 border-black"
             type={visible?"password":"text"}
             placeholder="Enter Your Password"
             name="password"

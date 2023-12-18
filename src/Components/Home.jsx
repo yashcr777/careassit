@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import InsurancePlans from "./InsurancePlans";
 import Footer from "./Footer";
+import Singleplan from "./Singleplan";
 function Home() {
   let links = [
     { name: "Home", link: "/" },
@@ -15,7 +16,8 @@ function Home() {
 
   return (
     <div>
-      <InsurancePlans />
+      <Navbar/>
+      <Singleplan />
     </div>
   );
 }

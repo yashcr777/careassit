@@ -19,7 +19,9 @@ function UserDashBoard() {
             .catch((error) => {
               console.log(error);
             })
-        : axios
+        : 
+        getCookie("Role") == "HealthProvider"?
+        axios
             .get(`https://localhost:7018/api/HealthProvider/${id}`)
             .then((result) => {
               console.log(result.data);
@@ -27,7 +29,17 @@ function UserDashBoard() {
             })
             .catch((error) => {
               console.log(error);
-            });
+            })
+            :
+            axios
+            .get(`https://localhost:7018/api/InsuranceCompany/${id}`)
+            .then((result) => {
+              console.log(result.data);
+              setData(result.data);
+            })
+            .catch((error) => {
+              console.log(error);
+            })
     }
   }, []);
   let links = [
@@ -60,10 +72,12 @@ function UserDashBoard() {
         )}{" "}
         {getCookie("Role") == "User" || getCookie("Role") == "Admin" ? (
           <h1 className="text-2xl text-red-700 my-3">Your name- {data.name}</h1>
-        ) : (
-          <h1 className="text-2xl text-red-700 my-3">
+        ) : (getCookie("Role") == "HealthProvider"?
+          (<h1 className="text-2xl text-red-700 my-3">
             Your name-{data.helathProvider_Name}
-          </h1>
+          </h1>):(<h1 className="text-2xl text-red-700 my-3">
+            Your name-{data.insuranceCompany_Name}
+          </h1>)
         )}
         {getCookie("Role") == "User" ? (
           <h1 className="text-2xl text-red-700 my-3">

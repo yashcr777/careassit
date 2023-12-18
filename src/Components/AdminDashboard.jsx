@@ -25,9 +25,7 @@ function AdminDashboard() {
 },[])
   return (
     <div>
-      {/* print all the claim and invoice */}
-      {/* Get All Invoices */}
-      {/* Get All Claims */}
+      <div></div>
       <div>{invoicesData}</div>
       <div>{claimsData}</div>
       

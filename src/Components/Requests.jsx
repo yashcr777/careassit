@@ -43,12 +43,12 @@ function Requests({ x }) {
           <div>
             {getCookie("Role") == "HealthProvider" ? (
               <div className="flex mx-4">
-              <button
+              {x.status1?<button
                 className="w-36 my-5 py-2 bg-teal-500 mx-2"
                 onClick={handleClick}
               >
                 Make Invoice
-              </button>
+              </button>:""}
               <button
                 className="w-36 my-5 py-2 bg-teal-500 mx-2"
                 onClick={handleClickDocs}

@@ -26,7 +26,7 @@ function InvoicePayment() {
   return (
     <div>
       <h1 className="text-4xl font-bold text-blue-800">
-        {x.status == 0 ? "Paid" : "UnPaid"}
+        {x.status == 1 ? "Paid" : "UnPaid"}
       </h1>
     </div>
   );

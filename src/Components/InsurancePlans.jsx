@@ -20,7 +20,7 @@ function InsurancePlans() {
   }, []);
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className="flex justify-center my-6">
         <div className="flex-col">
         {(!user)?<h2 className="text-4xl text-blue-500">Hello Welcome to CareAssit</h2>:<h2 className="mt-4 text-4xl text-blue-500">Welcome Yash please choose any plan</h2>}

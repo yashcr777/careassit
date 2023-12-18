@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
+import Navbar from "./Navbar";
 import { useState } from "react";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 function CreateRequests({ id1 }) {
   const location = useLocation();
@@ -59,14 +60,15 @@ function CreateRequests({ id1 }) {
   }
   return (
     <div className="flex-col">
+      <Navbar/>
       <form
-        className="h-screen border-4 border-indigo-600  w-full max-auto bg-blue-400 p-8 px-8 rounded-lg"
+        className="mt-6 h-1/2 border-4 border-indigo-600  w-full max-auto bg-blue-400 p-8 px-8 rounded-lg"
         onSubmit={handleSubmit}
       >
         <h1 className="text-2xl dark:text-white font-bold m">Create Request</h1>
         <div className="flex flex-col text-black-100 py-2">
           <label className="font-bold">Health Provider Name</label>
-          <select value={inputData.health_Id} onChange={handleData} name="health_Id" className="rounded-lg bg-yellow-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-800 focus:outline-none">
+          <select value={inputData.health_Id} onChange={handleData} name="health_Id" className="rounded-lg bg-yellow-100 mt-2 p-2 focus:border-blue-500  focus:outline-none">
             {healthData.map((x) => (
               <option key={x.health_Id} value={x.health_Id}>
                 {x.helathProvider_Name}
@@ -74,7 +76,7 @@ function CreateRequests({ id1 }) {
             ))}
           </select>
           <input
-            className="rounded-lg bg-yellow-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-800 focus:outline-none"
+            className="rounded-lg bg-yellow-100 mt-10 p-2 focus:border-blue-500  focus:outline-none"
             type="text"
             placeholder="Enter Your Doclink"
             name="docUrl"
@@ -82,7 +84,7 @@ function CreateRequests({ id1 }) {
             onChange={handleData}
           ></input>
         </div>
-        <button className="w-full my-5 py-2 bg-indigo-600" type="submit">
+        <button className="w-full mt-10 py-2 bg-indigo-600" type="submit">
           Submit
         </button>
       </form>
