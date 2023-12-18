@@ -64,14 +64,12 @@ function Form() {
       </div>
       <form
       className="max-w-[400px] w-full max-auto bg-green-200 p-8 px-8 rounded-lg border-solid border-2 border-indigo-400"
-        // className="border-4 border-indigo-600  max-w-[500px] w-full max-auto bg-blue-400 p-8 px-8 rounded-lg"
         onSubmit={handleSubmit}
       >
         <h1 className="text-2xl dark:text-white font-bold m">Sign up</h1>
         <div className="flex flex-col text-black-100 py-2">
           <label className="font-bold">User Name</label>
           <input
-            // className="rounded-lg bg-white-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-800 focus:outline-none"
             className="rounded-lg bg-yellow-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-100 border-solid border-2 border-black"
             type="text"
             placeholder="Enter Your Name"
@@ -84,7 +82,6 @@ function Form() {
           <label className="font-bold">Email</label>
 
           <input
-            // className="rounded-lg bg-white-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-800 focus:outline-none"
             className="rounded-lg bg-yellow-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-100 border-solid border-2 border-black"
             type="text"
             placeholder="Enter Your Email"
@@ -96,7 +93,6 @@ function Form() {
         <div className="flex flex-col text-black-100 py-2">
           <label className="font-bold">Password</label>
           <input
-            // className="rounded-lg bg-white-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-300 focus:outline-none"
             className="rounded-lg bg-yellow-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-100 border-solid border-2 border-black"
             type="text"
             placeholder="Enter Your Password"
@@ -108,7 +104,6 @@ function Form() {
         <div className="flex flex-col text-black-100 py-2">
           <label className="font-bold">Confirm Password</label>
           <input
-            // className="rounded-lg bg-white-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-300 focus:outline-none"
             className="rounded-lg bg-yellow-100 mt-2 p-2 focus:border-blue-500 focus:bg-blue-100 border-solid border-2 border-black"
             type="text"
             placeholder="Enter Your Password"

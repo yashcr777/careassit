@@ -21,13 +21,16 @@ const Navbar = () => {
     getCookie("Role") === "User" || getCookie("Role") === "HealthProvider" || getCookie("Role") === "Admin"
       ? { name: "Insuranceplan", link: "/insuranceplans" }
       : { name: "Createplan", link: "/createplan" },
-    getCookie("Role") == "Admin"?{ name: "All Requests", link: "/allrequest" }:{ name: "Requests", link: "/getallrequests" },
-    getCookie("Role") == "Admin"?{name:"All Invoices",link:"/allinvoice"}:{ name: "Invoices", link: "/getallinvoices" },
+    getCookie("Role") === "Admin"?{ name: "All Requests", link: "/allrequest" }:{ name: "Requests", link: "/getallrequests" },
+    getCookie("Role") === "Admin"?{name:"All Invoices",link:"/allinvoice"}:{ name: "Invoices", link: "/getallinvoices" },
     getCookie("Role") === "User" || getCookie("Role") === "InsuranceCompany"
       ? { name: "Claims", link: "/getallclaims" }
-      : getCookie("Role") == "Admin"?{name: "All Claims", link: "/allclaim"}: {name: "", link: "/" },
+      : getCookie("Role") === "Admin"?{name: "All Claims", link: "/allclaim"}: {name: "", link: "/" },
     getCookie("Role") === "User"
       ? { name: "AllHealthProviders", link: "/allproviders" }
+      : { name: "", link: "/" },
+      getCookie("Role") === "Admin"
+      ? { name: "AddHealthProviders", link: "/addprovider" }
       : { name: "", link: "/" },
       { name: "Logout", link: "/logout" },
   ]):(links = [
