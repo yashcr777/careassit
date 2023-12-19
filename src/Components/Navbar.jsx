@@ -30,7 +30,10 @@ const Navbar = () => {
       ? { name: "AllHealthProviders", link: "/allproviders" }
       : { name: "", link: "/" },
       getCookie("Role") === "Admin"
-      ? { name: "AddHealthProviders", link: "/addprovider" }
+      ? { name: "AddProviders", link: "/addprovider" }
+      : { name: "", link: "/" },
+      getCookie("Role") === "Admin"
+      ? { name: "AddCompany", link: "/addcompany" }
       : { name: "", link: "/" },
       { name: "Logout", link: "/logout" },
   ]):(links = [
@@ -79,11 +82,11 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          {user?(<Link to="/login">
+          {!getCookie("Role") === "Admin"?(user?(<Link to="/login">
             <Button>Get Started</Button>
           </Link>):(<Link to="/insuranceplans">
             <Button>Get Started</Button>
-          </Link>)}
+          </Link>)):(<div></div>)}
           
         </ul>
       </div>

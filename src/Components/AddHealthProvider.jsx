@@ -27,7 +27,7 @@ function AddHealthProvider() {
       const data = {
         email: inputData.email,
         password: inputData.password,
-        user_Name: inputData.helathProvider_Name,
+        helathProvider_Name: inputData.helathProvider_Name,
       };
       axios
         .post(url, data)
@@ -57,7 +57,7 @@ function AddHealthProvider() {
       >
         <h1 className="text-2xl dark:text-white font-bold m">Add Health Provider</h1>
         <div className="flex flex-col text-black-100 py-2">
-          <label className="font-bold">Health Provider Name</label>
+          <label className="font-bold">User Name</label>
           <input
             className="rounded-lg bg-white-100 mt-2 p-2 focus:border-blue-500  focus:outline-none"
             type="text"
@@ -68,7 +68,7 @@ function AddHealthProvider() {
           ></input>
         </div>
         <div className="flex flex-col text-black-100 py-2">
-          <label className="font-bold">Health Provider Email</label>
+          <label className="font-bold">Email</label>
           <input
             className="rounded-lg bg-white-100 mt-2 p-2 focus:border-blue-500  focus:outline-none"
             type="text"

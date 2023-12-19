@@ -36,6 +36,7 @@ import AllInvoices from "./Components/AllInvoices";
 import AllRequests from "./Components/AllRequests";
 import Singleplan from "./Components/Singleplan";
 import AddHealthProvider from "./Components/AddHealthProvider";
+import AddInsuranceCompany from "./Components/AddInsuranceCompany";
 function App() {
   
   var user = JSON.parse(localStorage.getItem("id"));
@@ -92,6 +93,7 @@ function App() {
           <Route path="/allrequest" element={<AllRequests/>}/>
           <Route path="/singleplan" element={<Singleplan/>}/>
           <Route path="/addprovider" element={<AddHealthProvider/>}/>
+          <Route path="/addcompany" element={<AddInsuranceCompany/>}/>
         </Routes>
       </Router>
     </>

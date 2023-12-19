@@ -2,6 +2,7 @@ import React from 'react'
 
 function Singleplan() {
   return (
+    <div>
     <div
       className="max-w-sm bg-white border border-gray-300 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex-col mt-10 ml-3">
       <img
@@ -25,6 +26,7 @@ function Singleplan() {
           </span>
         </div>
       </div>
+    </div>
     </div>
   )
 }
